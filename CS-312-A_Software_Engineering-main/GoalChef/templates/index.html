@@ -1,0 +1,801 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<html>
+    <head>
+        <style>
+            .overlay {
+                /* Overlay */
+                position: absolute;
+                width: 1440px;
+                height: 774px;
+                left: 0px;
+                top: 46px;
+
+                background: rgba(189, 189, 189, 0.4);
+            }
+            
+            image {
+                position: absolute;
+                object-fit: cover;
+                width: 1440px;
+                height: 774px;
+                left: 0px;
+                top: 50px;
+            }
+            
+            .text1 {
+                /* Eating healthy doesn’t have to be a hassle. */
+                position: absolute;
+                width: 736px;
+                height: 173px;
+                left: 352px;
+                top: 200px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 75px;
+                /* or 107% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+
+            .text2 {
+                /* Our mission here at GoalChef is to provide you with the guidance you need to eat right and feel right. We do all the heavy lifting, so you don’t have to. */
+                position: absolute;
+                width: 543px;
+                height: 123px;
+                left: 449px;
+                top: 450px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 35px;
+                /* or 140% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+            
+            .text3 {
+                /* Receive specific meal plans & recipes */
+                position: absolute;
+                width: 164px;
+                height: 48px;
+                left: 345px;
+                top: 675px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 20px;
+                /* or 118% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+            
+            .text4 {
+                /* Know where to buy & what to buy */
+                position: absolute;
+                width: 165px;
+                height: 48px;
+                left: 539px;
+                top: 675px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 20px;
+                /* or 118% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+
+            .text5 {
+                /* Nutritionists on-call 24/7 */
+                position: absolute;
+                width: 165px;
+                height: 48px;
+                left: 735px;
+                top: 675px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 20px;
+                /* or 118% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+
+            .text6 {
+                /* Keep track of your progress */
+                position: absolute;
+                width: 165px;
+                height: 48px;
+                left: 930px;
+                top: 675px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 20px;
+                /* or 118% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+
+            .ellipse {
+                /* Ellipse 1 */
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                left: 393px;
+                top: 625px;
+                border-radius: 50%;
+
+                /* Gray 2 */
+
+                background: #4F4F4F;
+            }
+
+            .img1 {
+                /* utensils */
+                position: absolute;
+                width: 54px;
+                height: 54px;
+                left: 400px;
+                top: 635px;
+                background: url(static/images/utensil.png);
+            }
+
+            .ellipse2 {
+                /* Ellipse 2 */
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                left: 588px;
+                top: 625px;
+                border-radius: 50%;
+
+                /* Gray 2 */
+
+                background: #4F4F4F;
+            }
+
+            .img2 {
+                /* list 1 */
+                position: absolute;
+                width: 51px;
+                height: 51px;
+                left: 598px;
+                top: 635px;
+
+                background: url(static/images/list.png);
+            }
+
+            .ellipse3 {
+                /* Ellipse 3 */
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                left: 783px;
+                top: 625px;
+                border-radius: 50%;
+
+                /* Gray 2 */
+
+                background: #4F4F4F;
+            }
+
+            .img3 {
+
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                left: 786px;
+                top: 630px;
+                background: url(static/images/mobile.png);
+            }
+
+            .ellipse4 {
+                /* Ellipse 4 */
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                left: 978px;
+                top: 625px;
+                border-radius: 50%;
+
+                /* Gray 2 */
+
+                background: #4F4F4F;
+            }
+
+            .img4 {
+                /* chart 1 */
+                position: absolute;
+                width: 48px;
+                height: 50px;
+                left: 990px;
+                top: 635px;
+
+                background: url(static/images/chart.png);
+            }
+            
+            .element1 {
+                /* Success Stories */
+                position: absolute;
+                width: 847px;
+                height: 93px;
+                left: 297px;
+                top: 800px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 70px;
+                /* or 100% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+
+            }
+
+            .element2 {
+                /* Celebrate your victories and inspire others! */
+                position: absolute;
+                width: 522px;
+                height: 71px;
+                left: 459px;
+                top: 925px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                /* or 120% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+            }
+
+            .featureimg1 {
+                position: absolute;
+                width: 360px;
+                height: 345px;
+                left: 150px;
+                top: 1000px;
+
+                background: url(static/images/guy.jpeg);
+            }
+
+            .featureimg2 {
+                position: absolute;
+                width: 360px;
+                height: 345px;
+                left: 540px;
+                top: 1000px;
+
+                background: url(static/images/yellow.jpeg);
+            }
+
+            .featureimg3 {
+                position: absolute;
+                width: 360px;
+                height: 345px;
+                left: 930px;
+                top: 1000px;
+
+                background: url(static/images/girl2.png);
+            }
+            
+            .rectangle2 {
+                position: absolute;
+                width: 1440px;
+                height: 402px;
+                left: 0px;
+                top: 1500px;
+
+                background: #EDFEFF;
+            }
+
+            .paragraph2 {
+                position: absolute;
+                width: 718px;
+                height: 248px;
+                left: 357px;
+                top: 1450px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 70px;
+                /* or 100% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+
+            }
+
+            .rectangle3 {
+                position: absolute;
+                width: 285px;
+                height: 92px;
+                left: 574px;
+                top: 1750px;
+
+                /* Blue 1 */
+
+                background: #2F80ED;
+
+            }
+
+            .getstarted {
+                /* GET STARTED */
+                position: absolute;
+                width: 285px;
+                height: 78px;
+                left: 574px;
+                top: 1760px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 35px;
+                line-height: 70px;
+                /* or 200% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+            .rectangle4 {
+                /* Rectangle 4 */
+                position: absolute;
+                width: 1440px;
+                height: 499px;
+                left: 0px;
+                top: 1875px;
+
+                /* Gray 2 */
+
+                background: #4F4F4F;
+            }
+
+            .goalchef {
+                /* GoalChef */
+                position: absolute;
+                width: 556px;
+                height: 97px;
+                left: 438px;
+                top: 1850px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 70px;
+                /* or 100% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+            .myaccount {
+                /* MY ACCOUNT */
+                position: absolute;
+                width: 165px;
+                height: 31px;
+                left: 330px;
+                top: 2000px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+                white-space: nowrap;
+            }
+
+            .aboutus2 {
+                /* ABOUT US */
+                position: absolute;
+                width: 165px;
+                height: 37px;
+                left: 525px;
+                top: 2000px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+
+            }
+
+            .articles {
+                /* ARTICLES */
+                position: absolute;
+                width: 165px;
+                height: 35px;
+                left: 720px;
+                top: 2000px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+
+            }
+            
+            .help {
+                /* HELP & SUPPORT */
+                position: absolute;
+                width: 210px;
+                height: 38px;
+                left: 915px;
+                top: 2000px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+                white-space: nowrap;
+
+
+            }
+            .text7 {
+                /* Sign In iOS App Android App */
+                position: absolute;
+                width: 165px;
+                height: 212px;
+                left: 330px;
+                top: 2050px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .text8 {
+                /* About Get Started Meal Planner */
+                position: absolute;
+                width: 165px;
+                height: 212px;
+                left: 525px;
+                top: 2050px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .text9 {
+                /* Blog */
+                position: absolute;
+                width: 165px;
+                height: 212px;
+                left: 727px;
+                top: 2050px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .text10 {
+                /* FAQ Media Inquiries GoalChef for Enterprise Careers */
+                position: absolute;
+                width: 266px;
+                height: 212px;
+                left: 922px;
+                top: 2050px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+            .privacy {
+                /* Privacy */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 735px;
+                top: 2320px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .terms {
+                /* Terms of Use */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 930px;
+                top: 2320px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .accessability {
+                /* Accessibility */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 1110px;
+                top: 2320px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .text11 {
+                /* ©2021 */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 1275px;
+                top: 2320px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <div class="image">
+            <img src="static/images/index_1.jpeg" alt="Food" width="1440px" height="774px">
+        </div>
+        <div class="text1">
+            <p>
+                Eating healthy doesn’t have to be a hassle.
+            </p>
+        </div>
+        <div class="text2">
+            <p>
+                Our mission here at GoalChef is to provide you with the guidance you need to eat right and feel right. We do all the heavy lifting, so you don’t have to.
+            </p>
+        </div>
+        <div class="ellipse"></div>
+        <div class="img1"></div>
+        <div class="ellipse2"></div>
+        <div class="img2"></div>
+        <div class="ellipse3"></div>
+        <div class="img3"></div>
+        <div class="ellipse4"></div>
+        <div class="img4"></div>
+        <div class="text3">
+            <p>Receive specific meal plans & recipes </p>
+        </div>
+        <div class="text4">
+            <p>Know where to buy & what to buy</p>
+        </div>
+        <div class="text5">
+            <p>Nutritionists on-call 24/7</p>
+        </div>
+        <div class="text6">
+            <p>Keep track of your progress</p>
+        </div>
+
+        <div class="element1">
+            <p>Success Stories</p>
+        </div>
+        <div class="element2">
+            <p>Celebrate your victories and inspire others!</p>
+        </div>
+        <div class="featureimg1">
+            <img src="static/images/guy.jpeg" alt="Guy transformation" width="360px" height="345px">
+            <p>GoalChef was a wake up call for  me.</p>
+            <p>-Olley</p>
+        </div>
+        <div class="featureimg2">
+            <img src="static/images/yellow.jpeg" alt="Girl transformation" width="360px" height="345px">
+            <p>It was clear what I needed to change in my diet and I stuck with it.</p>
+            <p>-Stephanie</p>
+        </div>
+        <div class="featureimg3">
+            <img src="static/images/girl2.jpeg" alt="Girl transformation" width="360px" height="345px">
+            <p>I’m no longer stressed about my meals and since my meals are healthy, I’ve been able to lose a ton of weight!</p>
+            <p>-Alison</p>
+        </div>
+
+        <div class="rectangle2"></div>
+        <div class="paragraph2">
+            <p>
+                Are you ready to take the next step in living healthier?
+            </p>
+        </div>
+        <div class="rectangle3"></div>
+        <div class="getstarted">
+            <a href="/register/"
+            style="text-decoration: none">GET STARTED</a>
+        </div>
+        <div class="rectangle4"></div>
+        <div class="goalchef">
+            <p>GoalChef</p>
+        </div>
+        <div class="myaccount">
+            <p>MY ACCOUNT</p>
+        </div>
+        <div class="aboutus2">
+            <p>ABOUT US</p>
+        </div>
+        <div class="articles">
+            <p>ARTICLES</p>
+        </div>
+        <div class="help">
+            <p>HELP & SUPPORT</p>
+        </div>
+        <div class="text7">
+            <p>Sign In</p>
+            <p>iOS App</p>
+            <p>Android App</p>
+        </div>
+        <div class="text8">
+            <p>About</p>
+            <p>Get Started</p>
+            <p>Meal Planner</p>
+        </div>
+        <div class="text9">
+            <p>Blog</p>
+        </div>
+        <div class="text10">
+            <p>FAQ</p>
+            <p>Media Inquiries</p>
+            <p>GoalChef for Enterprise</p>       
+            <p>Careers</p>
+        </div>
+        <div class="privacy">
+            <p>Privacy</p>
+        </div>
+        <div class="terms">
+            <p>Terms of Use</p>
+        </div>
+        <div class="accessability">
+            <p>Accessibility</p>
+        </div>
+        <div class="text11">
+            <p>©2021</p>
+        </div>
+
+    </body>
+</html>
+
+{% endblock %}

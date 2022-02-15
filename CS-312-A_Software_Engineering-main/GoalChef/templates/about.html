@@ -1,0 +1,519 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<html>
+    <head>
+        <style>
+            .rectangle {
+                position: absolute;
+                width: 1440px;
+                height: 900px;
+                left: 0px;
+                top: 50px;
+
+                background: rgba(203, 200, 182, 0.59);
+            }
+
+            .line {
+                position: absolute;
+                width: 120px;
+                height: 0px;
+                left: 196px;
+                top: 435px;
+
+                border: 1px solid #000000;
+            }
+
+            .aboutus {
+                position: absolute;
+                width: 600px;
+                height: 180px;
+                left: -330px;
+                top: 500px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 90px;
+                line-height: 170px;
+
+                color: #FFFFFF;
+
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transform: rotate(-90deg);
+                white-space: nowrap;
+
+            }
+
+            .title {
+                position: absolute;
+                width: 815px;
+                height: 179px;
+                left: 192px;
+                top: 150px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 70px;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+
+            }
+
+            .paragraph {
+                position: absolute;
+                width: 672px;
+                height: 467px;
+                left: 345px;
+                top: 425px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 30px;
+
+                color: #4F4F4F;
+            }
+
+            .rectangle2 {
+                position: absolute;
+                width: 1440px;
+                height: 402px;
+                left: 0px;
+                top: 900px;
+
+                background: #EDFEFF;
+            }
+
+            .paragraph2 {
+                position: absolute;
+                width: 718px;
+                height: 248px;
+                left: 357px;
+                top: 850px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 70px;
+                /* or 100% */
+
+                text-align: center;
+
+                /* Gray 2 */
+
+                color: #4F4F4F;
+
+            }
+
+            .rectangle3 {
+                position: absolute;
+                width: 285px;
+                height: 92px;
+                left: 574px;
+                top: 1150px;
+
+                /* Blue 1 */
+
+                background: #2F80ED;
+
+            }
+
+            .getstarted {
+                /* GET STARTED */
+                position: absolute;
+                width: 285px;
+                height: 78px;
+                left: 574px;
+                top: 1160px;
+                
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 35px;
+                line-height: 70px;
+                /* or 200% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+            .rectangle4 {
+                /* Rectangle 4 */
+                position: absolute;
+                width: 1440px;
+                height: 499px;
+                left: 0px;
+                top: 1300px;
+
+                /* Gray 2 */
+
+                background: #4F4F4F;
+            }
+
+            .goalchef {
+                /* GoalChef */
+                position: absolute;
+                width: 556px;
+                height: 97px;
+                left: 438px;
+                top: 1300px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 70px;
+                /* or 100% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .myaccount {
+                /* MY ACCOUNT */
+                position: absolute;
+                width: 165px;
+                height: 31px;
+                left: 330px;
+                top: 1425px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+                white-space: nowrap;
+            }
+
+            .aboutus2 {
+                /* ABOUT US */
+                position: absolute;
+                width: 165px;
+                height: 37px;
+                left: 525px;
+                top: 1425px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+
+            }
+
+            .articles {
+                /* ARTICLES */
+                position: absolute;
+                width: 165px;
+                height: 35px;
+                left: 720px;
+                top: 1425px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+
+            }
+            
+            .help {
+                /* HELP & SUPPORT */
+                position: absolute;
+                width: 210px;
+                height: 38px;
+                left: 915px;
+                top: 1425px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+
+                /* Gray 5 */
+
+                color: #E0E0E0;
+                white-space: nowrap;
+
+
+            }
+
+            .text1 {
+                /* Sign In iOS App Android App */
+                position: absolute;
+                width: 165px;
+                height: 212px;
+                left: 330px;
+                top: 1475px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .text2 {
+                /* About Get Started Meal Planner */
+                position: absolute;
+                width: 165px;
+                height: 212px;
+                left: 525px;
+                top: 1475px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .text3 {
+                /* Blog */
+                position: absolute;
+                width: 165px;
+                height: 212px;
+                left: 727px;
+                top: 1475px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .text4 {
+                /* FAQ Media Inquiries GoalChef for Enterprise Careers */
+                position: absolute;
+                width: 266px;
+                height: 212px;
+                left: 922px;
+                top: 1475px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 50px;
+                /* or 200% */
+
+
+                color: #FFFFFF;
+            }
+
+            .privacy {
+                /* Privacy */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 735px;
+                top: 1750px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .terms {
+                /* Terms of Use */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 930px;
+                top: 1750px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .accessability {
+                /* Accessibility */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 1110px;
+                top: 1750px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+            .text5 {
+                /* ©2021 */
+                position: absolute;
+                width: 165px;
+                height: 32px;
+                left: 1275px;
+                top: 1750px;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 20px;
+                /* or 80% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="rectangle"></div>
+        <div class="line"></div>
+        <div class="aboutus">
+            <h1>about us</h1>
+        </div>
+        <div class="title">
+            <p>
+                We do what we love, so you can live healthier
+            </p>
+        </div>
+        <div class="paragraph">
+            <p>
+                We were people, like you, who were looking for guidance in healthy meals and supplement choices to help us lose weight or gain weight that we could trust.
+            </p>
+            <p>
+                Our program provides personalized meal planning to a tee including timing of meals and snacks, recipes, supplements, shopping locations, and price transparency based off of your personal information and fitness desires. We are here to guide you every step of the way with our in-house nutritionists. 
+            </p>
+            <p>
+                We aim to create a community where we fuel our body with the right foods, and in doing so, we can all live life to its fullest potential.
+            </p>
+        </div>
+        <div class="rectangle2"></div>
+        <div class="paragraph2">
+            <p>
+                Are you ready to take the next step in living healthier?
+            </p>
+        </div>
+        <div class="rectangle3"></div>
+        <div class="getstarted">
+            <a href="/register/"
+            style="text-decoration: none">GET STARTED</a>
+        </div>
+        <div class="rectangle4"></div>
+        <div class="goalchef">
+            <p>GoalChef</p>
+        </div>
+        <div class="myaccount">
+            <p>MY ACCOUNT</p>
+        </div>
+        <div class="aboutus2">
+            <p>ABOUT US</p>
+        </div>
+        <div class="articles">
+            <p>ARTICLES</p>
+        </div>
+        <div class="help">
+            <p>HELP & SUPPORT</p>
+        </div>
+        <div class="text1">
+            <p>Sign In</p>
+            <p>iOS App</p>
+            <p>Android App</p>
+        </div>
+        <div class="text2">
+            <p>About</p>
+            <p>Get Started</p>
+            <p>Meal Planner</p>
+        </div>
+        <div class="text3">
+            <p>Blog</p>
+        </div>
+        <div class="text4">
+            <p>FAQ</p>
+            <p>Media Inquiries</p>
+            <p>GoalChef for Enterprise</p>       
+            <p>Careers</p>
+        </div>
+        <div class="privacy">
+            <p>Privacy</p>
+        </div>
+        <div class="terms">
+            <p>Terms of Use</p>
+        </div>
+        <div class="accessability">
+            <p>Accessibility</p>
+        </div>
+        <div class="text5">
+            <p>©2021</p>
+        </div>
+
+    </body>
+
+</html>
+{% endblock %}

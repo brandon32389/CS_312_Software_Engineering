@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+{% endblock %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+	<p class="text-center">Get started with your free account</p>
+	<div>
+		<form method="POST">
+			<!--First Name-->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+				 </div>
+				{{ render_field(form.first_name, class="form-control", placeholder="First name") }}
+			</div> <!-- form-group// -->
+
+			<!--Last Name-->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+				 </div>
+				{{ render_field(form.last_name, class="form-control", placeholder="Last name") }}
+			</div> <!-- form-group// -->
+
+			<!--Email Address-->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+				 </div>
+				{{ render_field(form.email_address, class="form-control", placeholder="Email address") }}
+			</div> <!-- form-group// -->
+
+			<!--Birth Date-->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+				</div>
+				{{ render_field(form.birth_date, class="form-control", placeholder="Birthdate") }}
+			</div> <!-- form-group// -->
+
+
+			<!--Phone Number-->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+				</div>
+				{{ render_field(form.phone_number, class="form-control", placeholder="Phone number") }}
+			</div> <!-- form-group// -->
+
+			<!--Password-->
+			 <div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+				</div>
+				{{ render_field(form.password, class="form-control", placeholder="Password") }}
+			</div> <!-- form-group// -->
+
+			<!--Confirm Password-->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+				</div>
+				{{ render_field(form.confirm, class="form-control", placeholder="Confirm password") }}
+			</div> <!-- form-group// -->
+
+			<button type="submit" class="btn btn-primary">Register</button>
+
+			<p class="text-center">Have an account? <a href="/login/">Log In</a> </p>
+		</form>
+
+	</div>
+	</article>
+</div> <!-- card.// -->
+
+</div>
+<!--container end.//-->
+{% endblock %}
+
+
+
+<!--	<form>-->
+<!--	&lt;!&ndash;First Name&ndash;&gt;-->
+<!--	<div class="form-group input-group">-->
+<!--		<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>-->
+<!--		 </div>-->
+<!--        {{ render_field(form.first_name, class="form-control", placeholder="First name") }}-->
+<!--    </div> ```&lt;!&ndash; form-group// &ndash;&gt;-->
+<!--	&lt;!&ndash;Last Name&ndash;&gt;-->
+<!--	<div class="form-group input-group">-->
+<!--		<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>-->
+<!--		 </div>-->
+<!--        {{ render_field(form.last_name, class="form-control", placeholder="Last name") }}-->
+<!--    </div> ```&lt;!&ndash; form-group// &ndash;&gt;-->
+<!--	&lt;!&ndash;Email Address&ndash;&gt;-->
+<!--    <div class="form-group input-group">-->
+<!--    	<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>-->
+<!--		 </div>-->
+<!--        {{ render_field(form.email_address, class="form-control", placeholder="Email address") }}-->
+<!--    </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--    <div class="form-group input-group">-->
+<!--    	<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>-->
+<!--		</div>-->
+<!--		<select class="custom-select" style="max-width: 120px;">-->
+<!--		    <option selected="">+971</option>-->
+<!--		    <option value="1">+972</option>-->
+<!--		    <option value="2">+198</option>-->
+<!--		    <option value="3">+701</option>-->
+<!--		</select>-->
+<!--    	<input name="" class="form-control" placeholder="Phone number" type="text">-->
+<!--    </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--    <div class="form-group input-group">-->
+<!--    	<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>-->
+<!--		</div>-->
+<!--		<select class="form-control">-->
+<!--			<option selected=""> Select job type</option>-->
+<!--			<option>Designer</option>-->
+<!--			<option>Manager</option>-->
+<!--			<option>Accaunting</option>-->
+<!--		</select>-->
+<!--	</div> &lt;!&ndash; form-group end.// &ndash;&gt;-->
+<!--    <div class="form-group input-group">-->
+<!--    	<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>-->
+<!--		</div>-->
+<!--        <input class="form-control" placeholder="Create password" type="password">-->
+<!--    </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--    <div class="form-group input-group">-->
+<!--    	<div class="input-group-prepend">-->
+<!--		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>-->
+<!--		</div>-->
+<!--        <input class="form-control" placeholder="Repeat password" type="password">-->
+<!--    </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--    <div class="form-group">-->
+<!--        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>-->
+<!--    </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--    <p class="text-center">Have an account? <a href="">Log In</a> </p>-->
+<!--</form>-->
